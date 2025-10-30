@@ -62,7 +62,7 @@ if SERVER or CLIENT then
 
 	-- Store them in a table so we can iterate easily
 	local maps = {
-		gm_nester = gm_nester,
+		gm_nestor = gm_nestor,
 		gm_quarantine = gm_quarantine,
 		gm_hazard = gm_hazard,
 		gm_barren = gm_barren,
