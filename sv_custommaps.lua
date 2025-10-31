@@ -37,14 +37,6 @@ if SERVER or CLIENT then
 
 	-- Store them in a GLOBAL table so we can iterate easily
 	customEntityMaps = {
-		gm_nestor = gm_nestor,
-		gm_quarantine = gm_quarantine,
-		gm_hazard = gm_hazard,
-		gm_barren = gm_barren,
-		gm_bridges = gm_bridges,
-		ow_breach_final = ow_breach_final,
-		ow_citadel = ow_citadel,
-		owc_traverse_clean = owc_traverse_clean,
 		placeholder = placeholder
 	}
 
