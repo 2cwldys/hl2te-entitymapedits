@@ -88,13 +88,9 @@ if SERVER or CLIENT then
 		placeholder = placeholder
 	}
 
-	-- Keep a list of valid filenames for cleanup
-	local validFiles = {}
-
 	-- Main write logic
 	for mapName, content in pairs(customEntityMaps) do
 		local fileName = "mapentities_" .. mapName .. ".txt"
-		validFiles[fileName] = true
 
 		if file.Exists(fileName, "DATA") then
 			local existing = file.Read(fileName, "DATA")
