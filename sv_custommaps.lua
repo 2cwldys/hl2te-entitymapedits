@@ -20,7 +20,7 @@ function ExcludeForbiddenEntEdits()
 	if not SERVER then return end
 	if not customEntityMaps then return end
 
-	local currentMap = game.GetMap() -- gets the current map name
+	local currentMap = game.GetMap():lower() -- gets the current map name
 	local fileName = "mapentities_" .. currentMap .. ".txt"
 
 	-- Remove the file if this map is not in the maps table
