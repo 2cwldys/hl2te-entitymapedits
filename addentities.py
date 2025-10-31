@@ -65,14 +65,14 @@ else:
     exit()
 
 # --- Step 6: Add to maps table ---
-maps_pattern = r"(\s*)(local maps\s*=\s*\{\s*\n)(\s*)(\w+\s*=)"
+maps_pattern = r"(\s*)(customEntityMaps\s*=\s*\{\s*\n)(\s*)(\w+\s*=)"
 match = re.search(maps_pattern, new_lua)
 if match:
     table_indent = match.group(3)  # Indentation of entries inside the table
     maps_entry = f"{table_indent}{map_name} = {map_name},\n"
 
     new_lua = re.sub(
-        r"(local maps\s*=\s*\{)\s*\n",
+        r"(customEntityMaps\s*=\s*\{)\s*\n",
         r"\1\n" + maps_entry,
         new_lua,
         count=1
